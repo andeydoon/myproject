@@ -1,0 +1,28 @@
+<IfModule mod_rewrite.c>
+  Options +FollowSymlinks
+  RewriteEngine On
+
+  RewriteCond %{HTTP_HOST} ^001canyin.com [NC]
+  RewriteRule ^(.*)$ http://www.001canyin.com/$1 [L,R=301]
+
+  RewriteCond %{HTTP_HOST} ^m.001canyin.com [NC]
+  RewriteRule ^(.*)$ http://mobile.001canyin.com/$1 [L,R=301]
+
+    RewriteBase /
+    RewriteRule ^(\w+)/index.html$ $1/ [L]
+    RewriteRule ^news/cat-(\d+)/$ news/list.php?catid=$1 [L]
+  #  RewriteRule ^news/list.php/catid-(\d+)/?page=(\d+)$ news/list.php?catid=$1&page=$2 [L]
+    RewriteRule ^tese/cat-(\d+)/$ tese/list.php?catid=$1[L]
+  #  RewriteRule ^tese/list.php/catid-(\d+)/?page=(\d+)$ tese/list.php?catid=$1&page=$2[L]
+
+  ErrorDocument 400 /errpage/400.html
+  ErrorDocument 401 /errpage/401.html
+  ErrorDocument 403 /errpage/403.html
+  ErrorDocument 404 /errpage/404.html
+  ErrorDocument 405 /errpage/405.html
+  ErrorDocument 500 /errpage/500.html
+  ErrorDocument 503 /errpage/503.html
+
+
+
+Redirect 301 /m http://mobile.001canyin.com

@@ -1,0 +1,56 @@
+﻿/* CSS Document */
+* { margin: 0; padding: 0; }
+body { max-width: 720px; margin: 0px auto; color: #333; font-family: "微软雅黑"; background-color: #F5F5F5; overflow-x: hidden; word-wrap: break-word; }
+a { text-decoration: none; }
+ol, ul { list-style: none; }
+h1, h2, h3, h4, h5, h6, p, ul, ol, dl { font-weight: normal; }
+input { box-shadow: none; border: none; }
+input:focus { border: none; }
+.mtb10 { margin-top: 10px; clear: both; }
+.flex-box { display: -webkit-box; display: -moz-box; display: -ms-flexbox; display: -webkit-flex; display: flex; }
+.flex-1 { -webkit-box-flex: 1; box-flex: 1; -moz-box-flex: 1; -webkit-flex: 1; -ms-flex: 1; flex: 1; }
+.flex-2 { -webkit-box-flex: 2; box-flex: 2; -moz-box-flex: 2; -webkit-flex: 2; -ms-flex: 2; flex: 2; }
+.flex-3 { -webkit-box-flex: 3; box-flex: 3; -moz-box-flex: 3; -webkit-flex: 3; -ms-flex: 3; flex: 3; }
+.com_head { height: 42px; background: #fff; line-height: 42px; padding: 0 15px; border-bottom: 1px solid #E5E5E5; }
+.com_head h3 { font-size: 18px; color: #C34242; float: left; }
+.com_head a { float: right; font-size: 12px; color: #888; }
+.clear { clear: both; overflow: hidden;  }
+/*头部*/
+ 
+/*头部弹出框*/
+     
+/*section_d*/
+.section_d .wrap { background: #fff; overflow: hidden }
+.section_d .tabs { font-size: 15px; height: 42px; line-height: 42px; border-bottom: 1px solid #E5E5E5; }
+.section_d .tabs li { display: block; text-align: center; list-style: none; float: left; width: 25%; }
+.section_d .tabs li.active { border-bottom: 2px solid #E84C4D; }
+.section_d .tabs a { display: block; color: #333; text-align: center; font-size: 15px; }
+.section_d .tabs li.active a { color: #E84C4D; transition: 0.1s; }
+.content-slide { padding: 0 10px; display: block; }
+.content-slide a img { float: left; width: 90px; height: 47px; padding-right: 15px;margin-top: 10px; }
+.content-slideone { padding: 16.5px 0; border-bottom: 1px solid #E5E5E5; overflow: hidden; }
+.content-slideone:last-child { border-bottom: none; }
+.content-slideone .a_slide { overflow: hidden; }
+.content-slideone .a_slide h3 { overflow: hidden; height: 44px; }
+.content-slideone .a_slide h3 a { color: #333; font-size: 16px; line-height: 22px; display: -webkit-box; overflow: hidden; text-overflow: ellipsis; -webkit-box-orient: vertical; -webkit-line-clamp: 2; }
+.content-slideone .a_slide p { padding-top: 5px; }
+.content-slideone .a_slide p a { color: #999; font-size:14px; }
+.content-slideone .a_slide p a span { padding-right: 15px; color: #E84C4D; font-size:15px; }
+.content-slidetwo .b_slide { padding: 27px 0; border-bottom: 1px solid #E5E5E5; overflow: hidden; display: block; }
+.content-slidetwo .b_slide:last-child { border-bottom: none; }
+.content-slidetwo .b_slide img { float: left; width: 20px; height: 20px; padding-right: 10px; }
+.content-slidetwo .b_slide .txt { margin-left: 30px; }
+.content-slidetwo .b_slide h4 { overflow: hidden; color: #333; text-overflow: ellipsis; white-space: nowrap; font-size: 16px; line-height: 20px; }
+.content-slidetwo .b_slide p { margin-top: 10px; }
+.content-slidetwo .b_slide p span { margin-right: 15px; border: 1px solid transparent; color: #999; }
+.content-slidetwo .b_slide .tag { padding: 0 3px; border-color: #E84C4D; border-radius: 3px; }
+.content-th { padding: 17.5px 0; border-bottom: 1px solid #E5E5E5; }
+.content-th:last-child { border-bottom: none; }
+.content-slide .a_right { overflow: hidden; }
+.content-slide .a_right h3 { overflow: hidden; height: 44px; }
+.content-slide .a_right h3 a { color: #333; font-size: 16px; line-height: 22px; display: -webkit-box; overflow: hidden; text-overflow: ellipsis; -webkit-box-orient: vertical; -webkit-line-clamp: 2; }
+.content-slide .a_right p { padding-top: 5px; }
+.content-slide .a_right p a { color: #999;font-size:14px; }
+.content-slide .a_right p a span { padding-right: 15px; color: #E84C4D;font-size:14px; }
+/*/section_d*/
+.footer2016 { font-size:16px !important;} 

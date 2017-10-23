@@ -1,0 +1,794 @@
+﻿/* rest */
+
+
+
+* { margin: 0px; padding: 0px; box-sizing: border-box; }
+html, body { min-height: 100%; font-family: "Microsoft YaHei"; font-size: 14px; color: #333; background: #f2f2f2; position: relative; text-align: center; }
+table { border-collapse: collapse; border-spacing: 0; }
+li { list-style: none; }
+h1, h2, h3, h4, h5, h6 { font-size: 14px; }
+a, a:hover { color: #333; text-decoration: none; }
+input[type="submit"], input[type="button"] { appearance: none; -webkit-appearance: none; -moz-appearance: none; }
+/* common */
+
+
+
+
+
+
+
+
+.main { border-top: 2px solid #fa936f; margin-top: 10px; clear: both; margin-bottom:40px; }
+footer { background-color: #fff; text-align: center; font-size:.6rem;}
+/*footer ul{text-align:center;zoom:1;overflow: hidden;display: -webkit-box;-webkit-box-orient: horizontal;-webkit-box-pack: center;-webkit-box-align: center;display: -moz-box; -moz-box-pack:center; -moz-box-align:center;text-align:center;}*/
+footer ul { text-align: center; zoom: 1; overflow: hidden; text-align: center; }
+footer li { line-height: 24px; margin:.5rem 0;
+position: relative; padding: 0 10px 0 6px; display: inline-block; }
+footer li a { display: block; color: #323232; }
+footer p { border-top: 1px solid #e4e4e4; line-height: 1.6rem; color: #969696; }
+
+
+
+
+
+
+
+.header { width: 100%; height: 70px; position: fixed; left: 0px; top: 0px; background: url(../images/headerbg.jpg) repeat-x center; background-size: 100% 70px; z-index: 99; }
+.headerCont { width: 100%; height: 70px; padding: 20px 0px; padding-left: 110px; padding-right: 50px; position: relative; }
+.headerCont1 { width: 100%; height: 70px; padding: 20px 10px 10px 10px; padding-left: 110px; position: relative; }
+.header2 { z-index: 9999; width: 100%; height: 45px; position: fixed; left: 0px; top: 0px; background: url(../images/headerbg2.jpg) repeat-x center; background-size: 100% 45px; }
+.header2Cont { width: 100%; height: 45px; padding: 7.5px 0px; padding-left: 50px; padding-right: 50px; position: relative;background: url(../images/headerbg2.jpg) repeat-x center;background-size: 100% 45px; }
+.logo, .logo img { width: 90px; height: 30px; }
+.logo { position: absolute; left: 10px; top: 20px; }
+.menu, .menu img { width: 30px; height: 30px; }
+.menu { position: absolute; right: 10px; top: 20px; }
+.menu2, .menu2 img { width: 30px; height: 30px; }
+.menu2 { position: absolute; right: 10px; top: 7.5px; }
+.back, .back img { width: 30px; height: 30px; }
+.back { position: absolute; left: 10px; top: 7.5px; }
+.search1 { width: 100%; height: 30px; background: #fff; padding: 3px; padding-left: 8px; border-radius: 15px; padding-right: 68px; overflow: hidden; border: 1px solid #ddd; }
+.search { width: 100%; height: 30px; background: #fff; padding: 3px; padding-left: 8px; border-radius: 15px; padding-right: 68px; overflow: hidden; }
+.searchTxt { display: block; width: 100%; height: 24px; line-height: 24px; font-size: 14px; color: #666; border: none; background: #fff; float: left; outline: none; }
+.searchBtn { display: block; width: 65px; height: 24px; border-radius: 12px; border: none; color: #fff; float: left; margin-right: -65px; padding-left: 25px; padding-right: 10px; background: #f57d37 url(../images/search.png) no-repeat 10px center; background-size: 15px 15px; outline: none; }
+.headerTit { width: 100%; height: 30px; line-height: 30px; font-size: 20px; color: #fff; }
+.footer { width: 100%; height: 100px; padding-top: 20px; margin-top: 10px; position: relative; margin-bottom:30px !;}
+.goTop { display: block; width: 60px; height: 60px; background: #fa892f url(../images/gotop.png) no-repeat center 5px; background-size: 14px 17px; border-radius: 50% 50% 0% 0%; position: absolute; left: 50%; margin-left: -30px; top: 0px; padding-top: 25px; font-size: 12px; line-height: 35px; color: #fff; }
+.footerCont { width: 100%; height: 100px; padding-top: 40px; background: url(../images/footerbg.jpg) repeat-x center; background-size: 100% 100px; }
+.footerCont p { width: 100%; line-height: 1.1em; color: #fff; }
+.footerCont p a { color: #fff; margin: 0px 8px; }
+.menuBox { width: 100%; overflow: hidden; background: #fff; position: absolute; left: 0px; top: 100%; display: none; border-bottom: 2px solid #d9d9d9; }
+.menuSub { width: 100%; overflow: hidden; padding: 0px 10px; margin-top: 6px; text-align: left; }
+.menuTit { width: 100%; height: 30px; border-bottom: 1px dotted #d9d9d9; padding: 5px 0px; }
+.menuTit strong { display: block; width: 100%; height: 20px; line-height: 30px; padding-left: 10px; font-size: 18px; line-height: 20px; }
+.borderZs { border-left: 8px solid #9250ab; color: #9250ab; }
+.borderShs { border-left: 8px solid #fa6588; color: #fa6588; }
+.borderQls { border-left: 8px solid #4ac8e8; color: #4ac8e8; }
+.menuList { width: 100%; overflow: hidden; line-height: 30px; font-size: 14px; }
+.menuList1 { width: 100%; overflow: hidden; line-height: 40px; font-size: 14px; }
+.menuList1 li { width: 16.666%; float: left; text-align: center; padding: 5px 0px; }
+.menuList1 .xhy { border: 1px solid #ddd; width: 40px; height: 25px; float: left; line-height: 25px; border-radius: 4px; background: #fff; }
+.menuList a { color: #666; margin-right: 10px; }
+.menuClose { display: block; width: 100%; height: 40px; background: url(../images/menuclose.png) no-repeat center; background-size: 20px 20px; }
+.contWrap { width: 100%; overflow: hidden; padding-top: 70px; }
+.contWrap2 { width: 100%; overflow: hidden; padding-top: 45px; }
+/* 首页 */
+
+
+
+.nav { width: 100%; margin: 0 auto; position: relative; overflow: hidden; border-bottom: 2px solid #d9d9d9; background: #fff; }
+.nav .hd { width: 60px; padding-left: 15px; padding-right: 5px; height: 20px; position: absolute; left: 50%; margin-left: -25px; bottom: 10px; background: #dcdcdc; opacity: 0.80; border-radius: 10px; }
+.nav .hd ul { width: 100%; height: 20px; padding: 5px 0px; text-align: center; }
+.nav .hd ul li { display: inline-block; width: 10px; height: 10px; margin-right: 10px; background: #fff; text-indent: -9999px; border-radius: 50%; }
+.nav .hd ul .on { background: #ff9328; }
+.nav .bd { position: relative; z-index: 0; }
+.nav .bd li { width: 100%; overflow: hidden; padding-bottom: 40px; }
+.nav .bd li a { display: block; width: 25%; height: 100px; float: left; padding-top: 70px; line-height: 30px; color: #333; font-size: 14px; position: relative; }
+.nav .bd li a i { display: block; width: 50px; height: 50px; position: absolute; left: 50%; margin-left: -25px; top: 20px; }
+.iconNav1 { background: url(../images/iconnav1.png); background-size: 50px 50px; }
+.iconNav2 { background: url(../images/iconnav2.png); background-size: 50px 50px; }
+.iconNav3 { background: url(../images/iconnav3.png); background-size: 50px 50px; }
+.iconNav4 { background: url(../images/iconnav4.png); background-size: 50px 50px; }
+.iconNav5 { background: url(../images/iconnav5.png); background-size: 50px 50px; }
+.iconNav6 { background: url(../images/iconnav6.png); background-size: 50px 50px; }
+.iconNav7 { background: url(../images/iconnav7.png); background-size: 50px 50px; }
+.iconNav8 { background: url(../images/iconnav8.png); background-size: 50px 50px; }
+.iconNav9 { background: url(../images/iconnav9.png); background-size: 50px 50px; }
+.iconNav10 { background: url(../images/iconnav10.png); background-size: 50px 50px; }
+.iconNav11 { background: url(../images/iconnav11.png); background-size: 50px 50px; }
+.iconNav12 { background: url(../images/iconnav12.png); background-size: 50px 50px; }
+.iconNav13 { background: url(../images/iconnav13.png); background-size: 50px 50px; }
+.iconNav14 { background: url(../images/iconnav14.png); background-size: 50px 50px; }
+.iconNav15 { background: url(../images/iconnav15.png); background-size: 50px 50px; }
+.iconNav16 { background: url(../images/iconnav16.png); background-size: 50px 50px; }
+.sec { width: 100%; overflow: hidden; background: #fff; }
+.borderTB { border-top: 2px solid #d9d9d9; border-bottom: 2px solid #d9d9d9; }
+.borderTb { border-bottom: 2px solid #d9d9d9; }
+.borderTB2 { border-top: 2px solid #ff9328; border-bottom: 2px solid #ff9328; }
+.borderTB3 { border-top: 1px solid #f28484; border-bottom: 1px solid #f28484; }
+.bg1 { background: #f2f2f2; }
+.bg2 { background: #fffaf7; }
+.secTit1 { width: 100%; height: 45px; border-bottom: 1px solid #d9d9d9; text-align: left; padding-top: 4px; font-size: 18px; }
+.secTit1 strong { display: inline-block; height: 40px; line-height: 40px; color: #fff; padding-left: 45px; padding-right: 20px; }
+.secTit2 { width: 100%; height: 45px; border-bottom: 1px solid #d9d9d9; text-align: left; padding-top: 5px; font-size: 18px; }
+.secTit2 strong { display: inline-block; height: 40px; line-height: 40px; color: #f57d37; padding-left: 35px; padding-right: 10px; margin-left: 10px; border-bottom: 2px solid #f57d37; }
+.secTitTop { width: 100%; height: 45px; border-bottom: 1px solid #d9d9d9; text-align: left; padding-top: 5px; font-size: 18px; }
+.secTitTop strong { display: inline-block; height: 40px; line-height: 40px; color: #333; padding-left: 35px; margin-left: 10px; }
+.secTit2 a, .secTitTop a { display: inline-block; width: 20px; height: 20px; float: right; margin-top: 10px; background: url(../images/iconmore.png); background-size: 20px 20px; margin-right: 10px; }
+.IconTit1 { background: #f57d37 url(../images/icontit1.png) no-repeat 10px center; background-size: 25px 25px; }
+.IconTit2 { background: #f57d37 url(../images/icontit2.png) no-repeat 10px center; background-size: 25px 25px; }
+.IconTit3 { background: url(../images/icontit3.png) no-repeat left center; background-size: 25px 25px; }
+.IconTit4 { background: url(../images/icontit4.png) no-repeat left center; background-size: 25px 25px; }
+.IconTit5 { background: url(../images/icontit5.png) no-repeat left center; background-size: 25px 25px; }
+.IconTit6 { background: #f57d37 url(../images/icontit6.png) no-repeat 10px center; background-size: 25px 25px; }
+.IconTit7 { background: url(../images/icontit7.png) no-repeat left center; background-size: 25px 25px; }
+.IconTit8 { background: url(../images/icontit8.png) no-repeat left center; background-size: 25px 25px; }
+.IconTit9 { background: url(../images/icontit9.png) no-repeat left center; background-size: 25px 25px; }
+.IconTit10 { background: url(../images/icontit10.png) no-repeat left center; background-size: 25px 25px; }
+.IconTit11 { background: url(../images/icontit11.png) no-repeat left center; background-size: 25px 25px; }
+.IconTit12 { background: url(../images/icontit12.png) no-repeat left center; background-size: 25px 25px; }
+.IconTit13 { background: url(../images/icontit13.png) no-repeat left center; background-size: 25px 25px; }
+.IconTit14 { background: url(../images/icontit14.png) no-repeat left center; background-size: 25px 25px; }
+.IconTit15 { background: url(../images/icontit15.png) no-repeat left center; background-size: 25px 25px; }
+.IconTit16 { background: url(../images/icontit16.png) no-repeat left center; background-size: 25px 25px; }
+.IconTit17 { background: url(../images/icontit17.png) no-repeat left center; background-size: 25px 25px; }
+.IconTit18 { background: url(../images/icontit18.png) no-repeat left center; background-size: 25px 25px; }
+.IconTit19 { background: url(../images/icontit19.png) no-repeat left center; background-size: 25px 25px; }
+.IconTit20 { background: url(../images/icontit20.png) no-repeat left center; background-size: 25px 25px; }
+.IconTit21 { background: url(../images/icontit21.png) no-repeat left center; background-size: 25px 25px; }
+.IconTit22 { background: url(../images/icontit22.png) no-repeat left center; background-size: 25px 25px; }
+.IconTit23 { background: url(../images/icontit23.png) no-repeat left center; background-size: 25px 25px; }
+.IconTitPd1 { background: url(../images/iconnav1.png) no-repeat left center; background-size: 25px 25px; }
+.IconTitPd2 { background: url(../images/iconnav2.png) no-repeat left center; background-size: 25px 25px; }
+.IconTitPd3 { background: url(../images/iconnav3.png) no-repeat left center; background-size: 25px 25px; }
+.IconTitPd4 { background: url(../images/iconnav4.png) no-repeat left center; background-size: 25px 25px; }
+.IconTitPd5 { background: url(../images/iconnav5.png) no-repeat left center; background-size: 25px 25px; }
+.IconTitPd6 { background: url(../images/iconnav6.png) no-repeat left center; background-size: 25px 25px; }
+.IconTitPd7 { background: url(../images/iconnav7.png) no-repeat left center; background-size: 25px 25px; }
+.IconTitPd8 { background: url(../images/iconnav8.png) no-repeat left center; background-size: 25px 25px; }
+.IconTitPd9 { background: url(../images/iconnav9.png) no-repeat left center; background-size: 25px 25px; }
+.IconTitPd10 { background: url(../images/iconnav10.png) no-repeat left center; background-size: 25px 25px; }
+.IconTitPd11 { background: url(../images/iconnav11.png) no-repeat left center; background-size: 25px 25px; }
+.IconTitPd11 { background: url(../images/iconnav11.png) no-repeat left center; background-size: 25px 25px; }
+.IconTitPd12 { background: url(../images/iconnav12.png) no-repeat left center; background-size: 25px 25px; }
+.IconTitPd13 { background: url(../images/iconnav13.png) no-repeat left center; background-size: 25px 25px; }
+.IconTitPd14 { background: url(../images/iconnav14.png) no-repeat left center; background-size: 25px 25px; }
+.IconTitPd15 { background: url(../images/iconnav15.png) no-repeat left center; background-size: 25px 25px; }
+.IconTitPd16 { background: url(../images/iconnav16.png) no-repeat left center; background-size: 25px 25px; }
+.secTit3 { width: 100%; height: 45px; border-bottom: 1px solid #d9d9d9; padding: 0px 10px; padding-top: 4px; }
+.secTitNav { width: 100%; height: 40px; line-height: 38px; font-size: 15px; }
+.secTitNav li { height: 40px; float: left; }
+.secTitNav li a { display: block; color: #666; }
+.secTitNav li.cur a { border-bottom: 2px solid #f57d37; color: #f57d37; }
+.secTitNav2f li { width: 50%; }
+.secTitNav3f li { width: 33.3333%; }
+.secTitNav4f li { width: 25%; }
+.iconSj { background: url(../images/iconsj-1.png) no-repeat left center; background-size: 25px 25px; padding-left: 25px; }
+.cur .iconSj { background: url(../images/iconsj-2.png) no-repeat left center; background-size: 25px 25px; }
+.iconXw { background: url(../images/iconxw-1.png) no-repeat left center; background-size: 25px 25px; padding-left: 25px; }
+.cur .iconXw { background: url(../images/iconxw-2.png) no-repeat left center; background-size: 25px 25px; }
+.iconWd { background: url(../images/iconwd-1.png) no-repeat left center; background-size: 25px 25px; padding-left: 25px; }
+.cur .iconWd { background: url(../images/iconwd-2.png) no-repeat left center; background-size: 25px 25px; }
+.secTab { width: 100%; height: 600px; padding-left: 70px; }
+.secNav { width: 70px; height: 600px; border-right: 1px solid #ddd; background: #fff; float: left; overflow: hidden; margin-left: -70px; }
+.secNav li { width: 70px; height: 60px; border-bottom: 1px solid #ddd; padding: 15px 0px; line-height: 30px; text-align: center; font-size: 16px; }
+.secNav li a { display: block; color: 3333; border-left: 2px solid #fff; }
+.secNav li.cur { background: #fffaf7; }
+.secNav li.cur a { border-left: 2px solid #f57d37; color: #f57d37; }
+.secNav li:last-child { border-bottom: none; }
+.secCont { width: 100%; height: 600px; float: left; background: #fffaf7; }
+.secPicList, .secPicList2 { width: 100%; overflow: hidden; border-bottom: 1px dotted #ddd; padding: 0px 10px; }
+.secPicList {/*height: 240px;*/ }
+.secPicList li, .secPicList2 li { width: 100%; height: 80px; padding: 5px 0px; padding-left: 100px; }
+.secPicLeft { width: 100px; height: 70px; float: left; margin-left: -100px; }
+.secPicLeft img { width: 100px; height: 70px; }
+.secPicRight, .secPicRight2 { width: 100%; height: 70px; float: left; padding-left: 10px; text-align: left; }
+.secPicRight h5, .secPicRight2 h5 { width: 100%; height: 20px; line-height: 20px; margin-bottom: 10px; font-size: 16px; font-weight: bold; }
+.secPicRight h5 a, .secPicRight2 h5 a { color: #ff0000; }
+.secPicRight p, .secPicRight2 p { width: 100%; height: 20px; line-height: 20px; font-size: 14px; color: #999; }
+.secPicRight p em, .secPicRight2 p em { font-style: normal; }
+.secPicRight h5, .secPicRight p, .secPicRight2 h5, .secPicRight2 p { text-overflow: ellipsis; overflow: hidden; white-space: nowrap; }
+.secPicRight2 p { padding-left: 20px; }
+.secTxtList { width: 100%;/*height: 120px;*/ padding: 0px 10px; }
+.secTxtList li { width: 100%; height: 40px; text-align: left; line-height: 40px; font-size: 14px; text-overflow: ellipsis; overflow: hidden; white-space: nowrap; padding-left: 15px; background: url(../images/sectxticon.png) no-repeat left center; background-size: 6px 9px; }
+.secTxtList li a { color: #666; }
+.secList { width: 100%; overflow: hidden; text-align: left; }
+.secList li { width: 100%; height: 40px; line-height: 40px; border-bottom: 1px solid #ddd; padding: 0px 10px; text-overflow: ellipsis; overflow: hidden; white-space: nowrap; }
+.secList li em { font-style: normal; color: #ed4b4b; }
+.secList li:last-child { border-bottom: none; }
+.secQ li, .secL li { padding-left: 30px; }
+.secQ li { background: url(../images/iconq.png) no-repeat 10px center; background-size: 16px 16px; }
+.secL li { background: url(../images/sectxticon.png) no-repeat 10px center; background-size: 6px 9px; }
+.secT li a { display: block; padding-left: 30px; position: relative; }
+.secT li a i { display: inline-block; width: 25px; height: 30px; padding-bottom: 10px; line-height: 20px; text-align: center; background: url(../images/sect.png); background-size: 25px 30px; color: #fff; font-style: normal; position: absolute; left: 0px; top: 8px; font-size: 12px; }
+.secListPic { width: 100%; padding-top: 10px; padding-left: 10px; overflow: hidden; }
+.secListPic li { width: 33.3333%; overflow: hidden; padding-right: 10px; float: left; margin-bottom: 10px; }
+.secListPic li img { width: 100%; padding: 5px; background: #eee; }
+.secListPic2 { width: 100%; padding-top: 10px; padding-left: 10px; overflow: hidden; }
+.secListPic2 li { width: 50%; overflow: hidden; padding-right: 10px; float: left; margin-bottom: 10px; }
+.secListPic2 li a { display: block; width: 100%; padding: 5px; background: #fffaf7; border: 1px solid #ddd; }
+.secListPic2 li img { width: 100%; height: 150px; }
+.secListPic2 li em { display: inline-block; width: 100%; height: 20px; font-style: normal; color: #666; }
+.secListPic3 { width: 100%; padding-top: 10px; padding-left: 10px; overflow: hidden; }
+.secListPic3 li { width: 33.3333%; overflow: hidden; padding-right: 10px; float: left; margin-bottom: 10px; }
+.secListPic3 li a { display: block; width: 100%; padding: 5px; background: #fffaf7; border: 1px solid #ddd; }
+.secListPic3 li img { width: 100%; }
+.secListPic3 li em { display: inline-block; width: 100%; height: 20px; font-style: normal; color: #666; }
+.secListPic2 li em, .secListPic3 li em { text-overflow: ellipsis; overflow: hidden; white-space: nowrap; }
+.secList3 { width: 100%; overflow: hidden; }
+.secList3Sub { width: 100%; overflow: hidden; display: none; }
+.secList3Sub li { width: 100%; height: 40px; line-height: 40px; padding: 0px 10px; border-bottom: 1px solid #ddd; padding-right: 90px; }
+.secList3Sub li:last-child { border-bottom: none; }
+.secList3Sub li a { display: block; width: 100%; height: 40px; float: left; padding-left: 15px; background: url(../images/sectxticon.png) no-repeat left center; background-size: 6px 9px; text-overflow: ellipsis; overflow: hidden; white-space: nowrap; color: #666; text-align: left; }
+.secList3Sub li em { display: block; width: 80px; float: left; margin-right: -80px; font-size: 12px; color: #ed4848; font-style: normal; text-align: right; }
+.secList3Sub2 { width: 100%; overflow: hidden; }
+.secList3Sub2 li { width: 100%; height: 40px; line-height: 40px; padding: 0px 10px; border-bottom: 1px solid #ddd; padding-right: 70px; }
+.secList3Sub2 li:last-child { border-bottom: none; }
+.secList3Sub2 li a { display: block; width: 100%; height: 40px; float: left; padding-left: 20px; background: url(../images/sectxticon2.png) no-repeat left center; background-size: 15px 15px; text-overflow: ellipsis; overflow: hidden; white-space: nowrap; color: #666; text-align: left; }
+.secList3Sub2 li em { display: block; width: 60px; float: left; margin-right: -60px; font-size: 12px; color: #ed4848; font-style: normal; text-align: right; }
+.secList4 { width: 100%; overflow: hidden; }
+.secList4 li { width: 100%; padding: 0px 33px 0px 74px; height: 40px; line-height: 40px; }
+.secList4 li a { text-overflow: ellipsis; overflow: hidden; white-space: nowrap; margin-left: -64px; display: block; float: left; width: 100%; height: 40px; color: #666; text-align: left; padding-left: 8px; background: url(../images/sectxticon.png) no-repeat left center; background-size: 6px 9px; }
+.secList4 li em { display: block; float: left; width: 80px; height: 40px; margin-right: -80px; color: #ed4848; font-size: 12px; text-align: right; font-style: normal; }
+.secList4 li strong { color: #ed4848; }
+.secList5 { width: 100%; overflow: hidden; }
+.secList5 li { width: 100%; padding: 0px 88px 0px 74px; height: 40px; line-height: 40px; }
+.secList5 li .a1 { margin-left: -64px; display: block; float: left; width: 64px; height: 40px; color: #666; text-align: left; padding-left: 8px; background: url(../images/sectxticon.png) no-repeat left center; background-size: 6px 9px; }
+.secList5 li .a2 { display: block; float: left; width: 100%; height: 40px; color: #666; text-overflow: ellipsis; overflow: hidden; white-space: nowrap; text-align: left; }
+.secList5 li em { display: block; float: left; width: 80px; height: 40px; margin-right: -80px; color: #ed4848; font-size: 12px; text-align: right; font-style: normal; }
+.secList5 li strong { color: #ed4848; }
+.secTagList { width: 100%; overflow: hidden; padding: 10px; border-bottom: 1px solid #ddd; text-align: left; }
+.secTagList li { width: 20%; height: 40px; line-height: 40px; float: left; }
+.secTagList li a { display: block; padding-left: 15px; background: url(../images/sectag.png) no-repeat left center; background-size: 12px 12px; text-overflow: ellipsis; overflow: hidden; white-space: nowrap; }
+.ewm { width: 100%; overflow: hidden; background: #fffaf7; padding: 15px; padding-left: 115px; }
+.ewmLeft { width: 100px; height: 100px; padding: 10px; float: left; margin-left: -100px; border: 1px solid #ffa143; position: relative; }
+.ewmLeft img { width: 100%; height: 100%; }
+.ewmLeft span { display: inline-block; position: absolute; background: #fffaf7; }
+.ewmT, .ewmB { left: 50%; margin-left: -40px; width: 80px; height: 1px; }
+.ewmR, .ewmL { top: 50%; margin-top: -40px; width: 1px; height: 80px; }
+.ewmT { top: -1px; }
+.ewmR { right: -1px; }
+.ewmB { bottom: -1px; }
+.ewmL { left: -1px; }
+.ewmRight { width: 100%; height: 100px; padding-left: 10px; float: left; text-align: left; color: #ff9328; line-height: 20px; }
+.ewmRight h2 { width: 100%; height: 20px; font-size: 16px; border-bottom: 1px solid #ff9328; }
+.ewmRight h2 strong { display: inline-block; border-bottom: 1px solid #ff9328; }
+.ewmRight p { width: 100%; line-height: 20px; overflow: hidden; font-size: 14px; }
+/*列表页*/
+
+
+
+.bread { width: 100%; padding-left: 30px; text-align: left; line-height: 37px; background: #f2f2f2 url(../images/iconhome.png) no-repeat 10px 10px; background-size: 17px 17px; }
+.bread a { margin: 0px 8px; }
+.bread, .bread a { color: #999; }
+.bread a:first-child { margin-left: 0px; }
+.sNav { width: 100%; overflow: hidden; padding: 5px 10px; background: #fffaf7; }
+.sNavSub { width: 100%; overflow: hidden; padding-right: 30px; line-height: 30px; position: relative; border-bottom: 1px dashed #f3943e; }
+.sNavSub:last-child { border-bottom: none; }
+.sNavSub strong { display: inline-block; width: 50px; height: 30px; position: absolute; left: 0px; top: 0px; color: #f3943e; font-size: 16px; font-weight: normal; }
+.sNavSub em { display: inline-block; width: 30px; height: 30px; position: absolute; right: 0px; top: 0px; background: url(../images/arrowright.png) no-repeat center; background-size: 15px 15px; }
+.sNavSub em.cur { background: url(../images/arrowdown.png) no-repeat center; background-size: 15px 15px; }
+.sNavSub p { width: 100%; height: 30px; overflow: hidden; text-align: left; font-size: 14px; color: #f3943e; }
+.sNavSub p a { color: #f3943e; margin: 0px 5px; }
+.sNavSub p a.cur { font-weight: bold; }
+.sNavList { width: 100%; overflow: hidden; }
+.sNavList a { display: block; width: 20%; float: left; line-height: 35px; color: #f3943e; text-overflow: ellipsis; overflow: hidden; white-space: nowrap; }
+.sNavList a:nth-child(1), .sNavList a:nth-child(2), .sNavList a:nth-child(3), .sNavList a:nth-child(4), .sNavList a:nth-child(5) { border-bottom: 1px dashed #f3943e; }
+.itemList { width: 100%; overflow: hidden; }
+.itemSub { width: 100%; height: 100px; padding: 10px; padding-left: 120px; border-bottom: 1px dotted #eee; }
+.itemSub:last-child { border-bottom: none; }
+.itemLeft, .itemRight, .itemRight2, .itemRight3, .itemRight4 { float: left; }
+.itemLeft { width: 110px; height: 80px; margin-left: -110px; }
+.itemLeft img { width: 110px; height: 80px; padding: 5px; background: #eee; }
+.itemRight, .itemRight2, .itemRight3, .itemRight4 { width: 100%; height: 80px; text-align: left; padding-left: 5px; position: relative; }
+.itemRight h5 { width: 100%; height: 30px; line-height: 30px; font-size: 16px; }
+.itemRight p { width: 100%; height: 25px; line-height: 25px; font-size: 14px; color: #999; }
+.itemLy { padding-right: 80px; position: relative; }
+.itemLy a, .itemLyBtn { display: inline-block; width: 80px; padding-left: 20px; height: 20px; line-height: 20px; border-radius: 3px; font-size: 12px; color: #fff; text-align: center; background: #f3943e url(../images/iconly.png) no-repeat 5px center; background-size: 15px 15px; position: absolute; right: 0px; }
+.itemLy a { top: 2px; }
+.itemAl a { display: inline-block; height: 25px; line-height: 23px; padding: 0px 5px; color: #f3943e; border: 1px solid #f3943e; margin-right: 5px; border-radius: 3px; }
+.itemAl a.cur { background: #f3943e; color: #fff; }
+.itemLyBtn { top: 30px; }
+.itemRight2 h5, .itemRight2 p, .itemRight3 h5, .itemRight4 h5, .itemRight4 p { width: 100%; height: 20px; line-height: 20px; }
+.itemRight2 h5, .itemRight3 h5, .itemRight4 h5 { font-size: 16px; }
+.itemRight2 p { padding-left: 20px; color: #666; }
+.itemRight3 h5 a { color: #fd9927; }
+.itemRight3 p { width: 100%; color: #666; line-height: 20px; max-height: 40px; }
+.itemRight3 p:last-child { padding-left: 20px; }
+.itemRight4 p { width: 100%; color: #666; line-height: 20px; max-height: 20px; }
+.itemRight p em, .itemRight2 p em, .itemRight3 p em, .itemRight4 p em { color: #f25161; font-style: normal; }
+.itemRight h5, .itemRight p, .itemRight2 h5, .itemRight2 p, .itemRight4 h5, .itemRight4 p { text-overflow: ellipsis; overflow: hidden; white-space: nowrap; }
+.articleTit { width: 100%; height: 40px; line-height: 40px; text-align: left; border-bottom: 1px solid #ddd; padding: 0px 10px; padding-left: 40px; color: #666; font-weight: normal; }
+.iconTit1 { background: url(../images/iconnav1.png) no-repeat 10px center; background-size: 20px 20px; }
+.iconTit2 { background: url(../images/iconnav2.png) no-repeat 10px center; background-size: 20px 20px; }
+.iconTit3 { background: url(../images/iconnav3.png) no-repeat 10px center; background-size: 20px 20px; }
+.iconTit4 { background: url(../images/iconnav4.png) no-repeat 10px center; background-size: 20px 20px; }
+.iconTit5 { background: url(../images/iconnav5.png) no-repeat 10px center; background-size: 20px 20px; }
+.iconTit6 { background: url(../images/iconnav6.png) no-repeat 10px center; background-size: 20px 20px; }
+.iconTit7 { background: url(../images/iconnav7.png) no-repeat 10px center; background-size: 20px 20px; }
+.iconTit8 { background: url(../images/iconnav8.png) no-repeat 10px center; background-size: 20px 20px; }
+.iconTit9 { background: url(../images/iconnav9.png) no-repeat 10px center; background-size: 20px 20px; }
+.iconTit10 { background: url(../images/iconnav10.png) no-repeat 10px center; background-size: 20px 20px; }
+.iconTit11 { background: url(../images/iconnav11.png) no-repeat 10px center; background-size: 20px 20px; }
+.iconTit12 { background: url(../images/iconnav12.png) no-repeat 10px center; background-size: 20px 20px; }
+.iconTit13 { background: url(../images/iconnav13.png) no-repeat 10px center; background-size: 20px 20px; }
+.iconTit14 { background: url(../images/iconnav14.png) no-repeat 10px center; background-size: 20px 20px; }
+.iconTit15 { background: url(../images/iconnav15.png) no-repeat 10px center; background-size: 20px 20px; }
+.iconTit16 { background: url(../images/iconnav16.png) no-repeat 10px center; background-size: 20px 20px; }
+.articleList { width: 100%; overflow: hidden; }
+.articleSub { width: 100%; height: 120px; padding: 10px; border-bottom: 1px solid #eee; padding-left: 120px; }
+.articleSub:last-child { border-bottom: none; }
+.articleLeft, .articleRight { float: left; }
+.articleLeft { width: 110px; height: 100px; margin-left: -110px; }
+.articleLeft a { display: block; width: 110px; height: 100px; padding: 5px; background: #eee; }
+.articleLeft a img { display: block; width: 100px; height: 70px; }
+.articleLeft a em { display: block; width: 100px; height: 20px; line-height: 20px; font-style: normal; color: #666; }
+.articleRight { text-align: left; width: 100%; padding-left: 5px; line-height: 20px; }
+.articleRight h5 { width: 100%; height: 20px; font-size: 16px; font-weight: normal; }
+.articleRight h5 a { display: block; color: #fd9927; }
+.articleRight p { font-size: 14px; color: #999; max-height: 60px; overflow: hidden; }
+.articleRight p.articleP { width: 100%; height: 20px; line-height: 20px; font-size: 12px; overflow: hidden; }
+.articleRight p.articleP span { display: inline-block; padding-left: 20px; margin-right: 10px; }
+.iconTime { background: url(../images/icontime.png) no-repeat left center; background-size: 15px 15px; }
+.iconView { background: url(../images/iconview.png) no-repeat left center; background-size: 15px 15px; }
+.articleLeft a em, .articleRight h5 a { text-overflow: ellipsis; overflow: hidden; white-space: nowrap; }
+.articleSub2 { width: 100%; height: 120px; padding: 10px; border-bottom: 1px solid #eee; }
+.articleList2 { width: 100%; overflow: hidden; padding: 10px; }
+.articleList2 li { width: 100%; padding-right: 80px; height: 40px; line-height: 40px; border-bottom: 1px dotted #eee; }
+.articleList2 li a { display: block; width: 100%; color: #666; text-align: left; float: left; text-overflow: ellipsis; overflow: hidden; white-space: nowrap; padding-left: 15px; background: url(../images/sectxticon.png) no-repeat left center; background-size: 6px 9px; }
+.articleList2 li em { display: block; width: 80px; height: 40px; font-size: 12px; color: #ed4848; text-align: right; float: left; margin-right: -80px; font-style: normal; }
+.articleList2 li:last-child { border-bottom: none; }
+.articlePicWrap { width: 100%; overflow: hidden; padding: 10px; }
+.articlePic { width: 100%; margin: 0 auto; position: relative; overflow: hidden; background: #fff; }
+.articlePic .hd { width: 80px; padding-left: 15px; padding-right: 5px; height: 20px; position: absolute; left: 50%; margin-left: -25px; bottom: 10px; background: #dcdcdc; opacity: 0.80; border-radius: 10px; }
+.articlePic .hd ul { width: 100%; height: 20px; padding: 5px 0px; text-align: center; }
+.articlePic .hd ul li { display: inline-block; width: 10px; height: 10px; margin-right: 10px; background: #fff; text-indent: -9999px; border-radius: 50%; }
+.articlePic .hd ul .on { background: #ff9328; }
+.articlePic .bd { position: relative; z-index: 0; }
+.articlePic .bd li { width: 100%; overflow: hidden; }
+.articlePic .bd li img { width: 100%; }
+.articleTitle { width: 100%; overflow: hidden; line-height: 30px; font-size: 18px; color: #333; }
+.articleMsg { margin: 0px 10px; overflow: hidden; border-left: 1px solid #ddd; }
+.articleMsg li { padding-left: 10px; text-align: left; width: 50%; height: 40px; float: left; line-height: 40px; color: #666; border-right: 1px solid #ddd; border-top: 1px solid #ddd; overflow: hidden; }
+.articleMsg li i { display: inline-block; width: 20px; height: 20px; margin-right: 5px; position: relative; top: 4px; }
+.articleMsg li em { color: #ed4848; font-style: normal; }
+.articleMsg li a { display: inline-block; height: 30px; padding: 0px 15px; background: #2d9c1c; color: #fff; margin-top: 5px; border-radius: 5px; line-height: 33px; }
+.iconJe { background: url(../images/iconje.png); background-size: 20px 20px; }
+.iconSq { background: url(../images/iconsq.png); background-size: 20px 20px; }
+.iconGz { background: url(../images/icongz.png); background-size: 20px 20px; }
+.iconZx { background: url(../images/iconzx.png); background-size: 20px 20px; }
+.articleLeveTop, .articleLeveMid, .articleLeveBtn { width: 100%; overflow: hidden; padding: 10px; }
+.articleLeveTop { height: 100px; padding-left: 120px; }
+.articleLeveTopLeft, .articleLeveTopRight { float: left; }
+.articleLeveTopLeft { width: 110px; height: 80px; margin-left: -110px; }
+.articleLeveTopLeft img { width: 110px; height: 80px; padding: 5px; background: #eee; }
+.articleLeveTopRight { width: 100%; height: 80px; text-align: left; padding-left: 10px; }
+.articleLeveTopRight h2 { width: 100%; height: 30px; line-height: 30px; font-size: 16px; }
+.articleLeveTopRight p { width: 100%; height: 25px; line-height: 25px; color: #666; padding-left: 20px; }
+.articleLeveTopRight p em { color: #f25161; font-style: normal; }
+.iconJe1 { background: url(../images/iconje1.png) no-repeat left center; background-size: 15px 15px; }
+.iconFl { background: url(../images/iconfl.png) no-repeat left center; background-size: 15px 15px; }
+.iconFl2 { background: url(../images/iconfl2.png) no-repeat left center; background-size: 15px 15px; }
+.iconGs { background: url(../images/icongs.png) no-repeat left center; background-size: 15px 15px; }
+.iconDq { background: url(../images/icondq.png) no-repeat left center; background-size: 15px 15px; }
+.iconXm { background: url(../images/iconxm.png) no-repeat left center; background-size: 15px 15px; }
+.iconDt { background: url(../images/icondt.png) no-repeat left center; background-size: 15px 15px; }
+.articleLeveTopRight h2, .articleLeveTopRight p { text-overflow: ellipsis; overflow: hidden; white-space: nowrap; }
+.articleLeveMid { border-top: 1px dotted #eee; border-bottom: 1px dotted #eee; text-align: left; }
+.articleLeveMid li { width: 50%; height: 30px; line-height: 30px; padding-left: 25px; float: left; overflow: hidden; color: #666; }
+.articleLeveMid li em { font-style: normal; margin-right: 3px; color: #ed4848; }
+.iconJe2 { background: url(../images/iconje2.png) no-repeat left center; background-size: 20px 20px; }
+.iconGz2 { background: url(../images/icongz2.png) no-repeat left center; background-size: 20px 20px; }
+.iconSq2 { background: url(../images/iconsq2.png) no-repeat left center; background-size: 20px 20px; }
+.iconZs { background: url(../images/iconzs.png) no-repeat left center; background-size: 20px 20px; }
+.iconZs img { width: 13px; height: 13px; }
+.iconQt { background: url(../images/iconqt.png) no-repeat left center; background-size: 20px 20px; }
+.articleLeveBtn a { display: inline-block; width: 120px; height: 30px; line-height: 30px; border-radius: 3px; padding-left: 35px; color: #fff; font-size: 14px; position: relative; }
+.articleLeveBtn a i { display: inline-block; width: 20px; height: 20px; position: absolute; left: 10px; top: 50%; margin-top: -10px; }
+.articleLeveBtnLeft { float: left; background: #2d9c1c; }
+.articleLeveBtnRight { float: right; background: #ff6600; }
+.iconDh { background: url(../images/icondh.png); background-size: 20px 20px; }
+.articleHyPic, .articleHyTit, .articleHyMsg { width: 100%; overflow: hidden; padding: 10px; }
+.articleHyPic { padding-right: 0px; border-bottom: 1px dashed #ddd; }
+.articleHyPic li { width: 50%; overflow: hidden; float: left; padding-right: 10px; }
+.articleHyPic li img { width: 100%; padding: 5px; border: 1px solid #ddd; }
+.articleHyTit { width: 100%; line-height: 30px; overflow: hidden; text-align: left; font-size: 16px; }
+.articleHyTit .a1 { display: inline-block; width: 100px; padding-left: 30px; padding-right: 5px; float: right; background: #2d9c1c; color: #fff; border-radius: 5px; position: relative; }
+.articleHyTit a i { display: inline-block; width: 20px; height: 20px; position: absolute; left: 5px; top: 50%; margin-top: -10px; }
+.articleHyMsg { width: 100%; overflow: hidden; text-align: left; position: relative; padding-top: 0px; }
+.articleHyMsg p { width: 100%; height: 30px; line-height: 30px; color: #666; padding-left: 20px; }
+.articleHyMsg p em { font-style: normal; color: #f25161; }
+.articleNav { width: 100%; height: 45px; padding-top: 4px; border-bottom: 1px solid #ddd; padding-left: 10px; }
+.articleNav li { width: 20%; height: 40px; float: left; padding-right: 10px; font-size: 12px; line-height: 40px; }
+.articleNav li a { display: block; width: 100%; height: 40px; color: #666; }
+.articleNav li.cur a { border-bottom: 2px solid #e44b46; }
+.articleWrap { width: 100%; overflow: hidden; text-align: left; }
+
+/*.articleCont { width: 100%; overflow: hidden; padding: 10px 10px; display: none; }*/
+
+.articleCont p { /*width: 100%;*/ overflow: hidden; font-size: 14px; line-height: 1.8em; color: #666; }
+.articleCont p img { max-width: 500px; height: auto; margin: 10px 0px; text-align: center }
+.articleContTit { width: 100%; line-height: 30px; overflow: hidden; font-size: 16px; color: #fd9927; text-align: center; margin-bottom: 10px; padding: 0px 10px; }
+.articleContBread { position: relative; width: 100%; height: 20px; line-height: 20px; text-align: center; font-size: 12px; color: #999; margin-bottom: 10px; }
+.articleContBread span { display: inline-block; padding-left: 20px; margin-right: 10px; }
+.articlePane { width: 100%; overflow: hidden; border-bottom: 1px solid #ddd; }
+.articlePane:last-child { border-bottom: none; }
+.articlePaneTit { width: 100%; height: 40px; line-height: 40px; border-bottom: 1px solid #ddd; padding-left: 40px; padding-right: 10px; text-align: left; font-size: 18px; }
+.articlePaneTit a { display: inline-block; height: 40px; padding-right: 20px; float: right; font-size: 14px; color: #999; background: url(../images/arrowup.png) no-repeat right center; background-size: 15px 15px; font-weight: normal; }
+.articleIcon1 { background: url(../images/articleicon1.png) no-repeat 10px center; background-size: 30px 30px; }
+.articleIcon2 { background: url(../images/articleicon2.png) no-repeat 10px center; background-size: 30px 30px; }
+.articleIcon3 { background: url(../images/articleicon3.png) no-repeat 10px center; background-size: 30px 30px; }
+.articleIcon4 { background: url(../images/articleicon4.png) no-repeat 10px center; background-size: 30px 30px; }
+.articleIcon5 { background: url(../images/articleicon5.png) no-repeat 10px center; background-size: 30px 30px; }
+.articleIcon6 { background: url(../images/articleicon6.png) no-repeat 10px center; background-size: 30px 30px; }
+.articleIcon7 { background: url(../images/articleicon7.png) no-repeat 10px center; background-size: 30px 30px; }
+.articlePaneCont { width: 100%; overflow: hidden; padding: 10px; }
+.articlePaneCont p { font-size: 14px; line-height: 25px; }
+.articlePaneCont p img { width: 100%; max-width: 680px; }
+.articlePaneCont2 { width: 100%; overflow: hidden; padding: 10px; }
+.articlePaneList { width: 100%; overflow: hidden; }
+.articlePaneList li { width: 100%; height: 40px; line-height: 40px; padding-left: 10px; padding-right: 90px; border-bottom: 1px solid #ddd; }
+.articlePaneList li:last-child { border-bottom: none; }
+.articlePaneList li a, .articlePaneList li em { display: block; float: left; }
+.articlePaneList li a { width: 100%; height: 40px; text-overflow: ellipsis; overflow: hidden; white-space: nowrap; text-align: left; padding-left: 15px; background: url(../images/sectxticon.png) no-repeat left center; background-size: 6px 9px; }
+.articlePaneList li em { width: 80px; height: 40px; margin-right: -80px; font-style: normal; font-size: 12px; color: #999; text-align: right; }
+.articlePaneList1 { width: 100%; overflow: hidden; }
+.articlePaneList1 li, .articlePaneList1 li a { width: 100%; line-height: 40px; overflow: hidden; }
+.articlePaneList1 li { padding: 0px 10px; border-bottom: 1px solid #ddd; }
+.articlePaneList1 li:last-child { border-bottom: none; }
+.articlePaneList1 li a { display: block; padding-left: 25px; position: relative; }
+.articlePaneList1 li i { display: inline-block; width: 20px; height: 20px; padding-right: 5px; text-align: center; line-height: 20px; background: url(../images/ordericon.png); background-size: 20px 20px; color: #fff; font-size: 12px; font-style: normal; position: absolute; left: 0px; top: 10px; }
+.recom { width: 100%; overflow: hidden; }
+.recomTit { width: 100%; height: 40px; line-height: 40px; padding: 0px 10px; border-bottom: 1px solid #ddd; text-align: left; font-size: 16px; }
+.recomTit strong { display: inline-block; height: 39px; border-bottom: 2px solid #f57d37; color: #f57d37; padding: 0px 5px; }
+.recomList { width: 100%; overflow: hidden; padding: 10px; }
+.recomList li { width: 100%; padding-right: 80px; height: 40px; line-height: 40px; border-bottom: 1px dotted #eee; }
+.recomList li a { display: block; width: 100%; color: #666; text-align: left; float: left; text-overflow: ellipsis; overflow: hidden; white-space: nowrap; padding-left: 15px; background: url(../images/sectxticon.png) no-repeat left center; background-size: 6px 9px; }
+.recomList li em { display: block; width: 80px; height: 40px; font-size: 12px; color: #ed4848; text-align: right; float: left; margin-right: -80px; font-style: normal; }
+.recomList li:last-child { border-bottom: none; }
+.pageBox { width: 100%; height: 65px; padding: 20px 0px; }
+.pageBox li { float: left; }
+.pageBox a { display: inline-block; padding: 0px 8px; height: 25px; line-height: 25px; color: #666; background: #f9f9f9; border: 1px solid #d9d9d9; position: relative; margin-right: 5px; }
+.pageBox a i { display: inline-block; width: 12px; height: 12px; position: absolute; top: 50%; margin-top: -6px; }
+.pageBox a.pagePrev { padding-left: 20px; }
+.pageBox a.pageNext { padding-right: 20px; }
+.pageBox a.pagePrev i { left: 4px; }
+.pageBox a.pageNext i { right: 4px; }
+.iconPrev { background: url(../images/pageprev.png); background-size: 12px 12px; }
+.iconNext { background: url(../images/pagenext.png); background-size: 12px 12px; }
+.lyBox { width: 100%; padding: 15px 30px; overflow: hidden; background: #fffaf7; border-top: 1px solid #f28484; border-bottom: 1px solid #f28484; }
+.lyTit { width: 100%; height: 20px; line-height: 20px; margin-bottom: 10px; font-size: 16px; color: #fe6c00; }
+.lyTit2 { width: 100%; height: 20px; line-height: 20px; margin-bottom: 10px; font-size: 16px; color: #fe6c00; text-align: left; padding-left: 30px; background: url(../images/articleicon6.png) no-repeat left center; background-size: 25px 25px; }
+.lyList { width: 100%; overflow: hidden; }
+.lySub { width: 100%; min-height: 40px; overflow: hidden; margin-bottom: 10px; border: 1px solid #ddd; background: #fff; border-radius: 5px; padding-left: 60px; }
+.lySub label { display: block; width: 60px; height: 38px; line-height: 38px; float: left; margin-left: -60px; color: #666; }
+.lyText { display: block; width: 100%; height: 38px; line-height: 38px; float: left; border: none; outline: none; }
+.lyCont { width: 100%; height: 76px; line-height: 38px; border: none; outline: none; }
+.lyText, .lyCont { color: #333; }
+.lyBtn { width: 100%; height: 40px; border: none; background: #fe6c00; border-radius: 3px; color: #fff; font-size: 16px; font-weight: bold; }
+.subjectTitle { width: 100%; overflow: hidden; line-height: 30px; font-size: 18px; color: #f57d37; }
+.subjectJj { width: 100%; overflow: hidden; line-height: 25px; font-size: 14px; text-indent: 4em; position: relative; text-align: left; padding: 10px; border-top: 1px dotted #eee; }
+.subjectJj strong { display: inline-block; width: 50px; height: 28px; padding-right: 4px; background: url(../images/jjbg.png) no-repeat center; background-size: 50px 28px; text-indent: 0px; position: absolute; top: 10px; left: 10px; color: #fff; text-align: center; }
+.secMore { display: block; margin: 10px; height: 40px; line-height: 40px; background: #f2f2f2; font-size: 15px; color: #f57d37; }
+.secMore i { display: inline-block; width: 15px; height: 15px; margin-left: 8px; position: relative; top: 3px; }
+.arrowDown { background: url(../images/arrowdown.png); background-size: 15px 15px; }
+.wdLink { width: 100%; overflow: hidden; padding-top: 10px; padding-left: 10px; }
+.wdLink li { width: 50%; overflow: hidden; padding-right: 10px; margin-bottom: 10px; float: left; }
+.wdLink li a { display: block; width: 100%; height: 60px; padding: 5px; border-radius: 5px; text-align: left; color: #fff; font-size: 12px; line-height: 20px; }
+.wdLink li a strong { line-height: 30px; font-size: 16px; }
+.wdLink1 { background: #68d8ad; }
+.wdLink2 { background: #f8c028; }
+.wdLink3 { background: #f8a781; }
+.wdLink4 { background: #90db5c; }
+.wdLink5 { background: #CD66FF; }
+.wdLink6 { background: #FF7D6F; }
+.wdMsgWrap { width: 100%; overflow: hidden; padding: 10px; }
+.wdMsg { width: 100%; height: 35px; padding: 0px 15px; background: #ed4848; line-height: 35px; font-size: 16px; color: #fff; position: relative; }
+.wdMsg em { font-style: normal; margin: 0px 5px; }
+.wdMsg em:first-child { margin-left: 0px; }
+.wdMsg i { display: inline-block; width: 15px; height: 35px; position: absolute; top: 0px; }
+.wdMsgLeft { background: url(../images/wdmsgleft.png); background-size: 15px 35px; left: 0px; }
+.wdMsgRight { background: url(../images/wdmsgright.png); background-size: 15px 35px; right: 0px; }
+.wdNav { width: 100%; overflow: hidden; padding-bottom: 10px; }
+.wdNav li { width: 25%; overflow: hidden; float: left; height: 80px; padding-top: 60px; line-height: 20px; font-size: 14px; position: relative; }
+.wdNav li i { display: inline-block; width: 50px; height: 50px; position: absolute; left: 50%; margin-left: -25px; top: 10px; }
+.wdNav1 { background: url(../images/wdnav1.png); background-size: 50px 50px; }
+.wdNav2 { background: url(../images/wdnav2.png); background-size: 50px 50px; }
+.wdNav3 { background: url(../images/wdnav3.png); background-size: 50px 50px; }
+.wdNav4 { background: url(../images/wdnav4.png); background-size: 50px 50px; }
+.wdNav5 { background: url(../images/wdnav5.png); background-size: 50px 50px; }
+.wdNav6 { background: url(../images/wdnav6.png); background-size: 50px 50px; }
+.wdNav7 { background: url(../images/wdnav7.png); background-size: 50px 50px; }
+.wdNav8 { background: url(../images/wdnav8.png); background-size: 50px 50px; }
+.wdNav9 { background: url(../images/wdnav9.png); background-size: 50px 50px; }
+.wdNav10 { background: url(../images/wdnav10.png); background-size: 50px 50px; }
+.wdNav11 { background: url(../images/wdnav11.png); background-size: 50px 50px; }
+.wdNav12 { background: url(../images/wdnav12.png); background-size: 50px 50px; }
+.secTit2 a.wdHf { display: inline-block; width: 60px; padding-right: 0px; height: 30px; color: #f57d37; background: #fff; border: 1px solid #f57d37; font-size: 14px; float: right; margin-top: 0px; line-height: 28px; text-align: center; border-radius: 3px; }
+.secTit2 a.wdHf.cur { background: #f57d37; color: #fff; }
+.wdList { width: 100%; overflow: hidden; }
+.wdSub { width: 100%; overflow: hidden; text-align: left; padding: 10px; border-bottom: 1px solid #ddd; }
+.wdSub:last-child { border-bottom: none; }
+.wdSub h5 { width: 100%; height: 30px; line-height: 30px; font-size: 16px; padding-left: 25px; background: url(../images/wdlisticon.png) no-repeat left center; background-size: 18px 18px; text-overflow: ellipsis; overflow: hidden; white-space: nowrap; }
+.wdSub p { width: 100%; height: 25px; overflow: hidden; }
+.wdSub p strong, .wdSub p span, .wdSub em { display: inline-block; float: left; }
+.wdSub p strong { width: 70px; color: #f57d37; }
+.wdSub p span { padding-left: 20px; }
+.wdSub p i { font-style: normal; color: #f57d37; margin: 0px 8px; }
+.wdSub em { float: right; font-style: normal; color: #999; }
+.wdBox { width: 100%; overflow: hidden; padding: 10px; }
+.wdBoxC { width: 100%; height: 100px; margin-bottom: 10px; padding-left: 100px; }
+.wdBoxL, .wdBoxR { height: 100px; float: left }
+.wdBoxL { width: 100px; margin-left: -100px; }
+.wdBoxL img { width: 100px; height: 100px; border: 1px solid #ddd; padding: 5px; }
+.wdBoxR { width: 100%; line-height: 25px; text-align: left; padding-left: 5px; }
+.wdBoxT { width: 100%; height: 75px; font-size: 16px; overflow: hidden; }
+.wdBoxB { width: 100%; height: 25px; overflow: hidden; font-size: 12px; }
+.wdBoxB strong, .wdBoxB em, .wdBoxB span { display: inline-block; margin-right: 10px; font-weight: normal; font-style: normal; color: #999; }
+.wdBoxB strong, .wdBoxB em { padding-left: 20px; }
+.wdBoxB strong, .wdBoxB span { color: #f57d37; }
+.wdBoxP { width: 100%; overflow: hidden; line-height: 25px; color: #666; text-align: left; }
+.wdMc, .wdMs, .wdMp { width: 100%; overflow: hidden; }
+.wdMs { padding: 10px; border-bottom: 1px solid #ddd; }
+.wdMs:last-child { border-bottom: none; }
+.wdMp, .wdMb { text-align: left; line-height: 25px; }
+.wdMp { color: #666; }
+.wdMb strong, .wdMb em { display: inline-block; }
+.wdMb strong { width: 80px; margin-right: 10px; font-weight: normal; color: #ff670e; }
+.wdMb em { font-style: normal; color: #999; padding-left: 20px; }
+.topListPic { width: 100%; overflow: hidden; padding-top: 10px; padding-left: 10px; }
+.topListPic li { width: 50%; overflow: hidden; padding-right: 10px; padding-bottom: 10px; float: left; }
+.topListPic li a { display: block; width: 100%; overflow: hidden; background: #eee; padding: 5px; }
+.topListPic li img { height: 70px; display: block; width: 100%; }
+.topListPic li em { display: block; width: 100%; height: 25px; line-height: 25px; color: #666; font-style: normal; text-overflow: ellipsis; overflow: hidden; white-space: nowrap; }
+.topListTxt { width: 100%; overflow: hidden; }
+.topListTxt li { width: 100%; height: 40px; line-height: 40px; padding: 0px 10px; text-align: left; border-bottom: 1px solid #ddd; }
+.topListTxt li:last-child { border-bottom: none; }
+.topListTxt li a { display: block; width: 100%; height: 40px; padding-left: 25px; position: relative; color: #666; text-overflow: ellipsis; overflow: hidden; white-space: nowrap; }
+.topListTxt li i { display: inline-block; width: 20px; height: 20px; background: #eee; color: #666; border-radius: 50%; line-height: 20px; text-align: center; font-style: normal; position: absolute; left: 0px; top: 50%; margin-top: -10px; }
+.topListTxt li:nth-child(1) i, .topListTxt li:nth-child(2) i, .topListTxt li:nth-child(3) i { background: #fd9927; color: #fff; }
+.topList { width: 100%; overflow: hidden; border-top: 1px solid #ddd; }
+.topSub { width: 100%; overflow: hidden; height: 90px; padding: 10px; padding-left: 175px; border-bottom: 1px dotted #ddd; }
+.topSub:last-child { border-bottom: none; }
+.topLeft, .topRight { float: left; }
+.topLeft, .topLeft img { width: 165px; height: 70px; }
+.topLeft { margin-left: -165px; }
+.topRight { text-align: left; width: 100%; height: 70px; padding-left: 5px; }
+.topRight h5, .topRight p { width: 100%; text-overflow: ellipsis; overflow: hidden; white-space: nowrap; }
+.topRight h5 { height: 30px; line-height: 20px; font-size: 16px; }
+.topRight p { height: 20px; line-height: 20px; font-size: 12px; color: #666; }
+.topRight p em { font-style: normal; color: #f25161; }
+.topBtn { width: 100%; padding: 10px; overflow: hidden; }
+.topBtn li { width: 50%; height: 30px; text-align: center; float: left; overflow: hidden; }
+.topBtn li img { height: 30px; }
+.articleTopList { width: 100%; overflow: hidden; text-align: left; }
+.articleTopSub { width: 100%; padding: 10px; overflow: hidden; border-bottom: 1px dotted #ddd; }
+.articleTopSub:last-child { border-bottom: none; }
+.articleTopSub h5 { width: 100%; height: 30px; line-height: 30px; font-size: 16px; padding-right: 90px; font-weight: normal; }
+.articleTopSub h5 a, .articleTopSub h5 em { display: block; float: left; height: 30px; }
+.articleTopSub h5 a { width: 100%; color: #fd9927; text-overflow: ellipsis; overflow: hidden; white-space: nowrap; font-size: 16px; }
+.articleTopSub h5 em { display: block; width: 80px; font-size: 12px; color: #999; text-align: right; margin-right: -90px; font-style: normal; }
+.articleTopSub p { width: 100%; overflow: hidden; line-height: 25px; color: #666; }
+.articleTopTit { width: 100%; line-height: 30px; overflow: hidden; font-size: 18px; color: #fd9927; margin-top: 10px; text-align: center; }
+.articleTopB { width: 100%; line-height: 25px; overflow: hidden; font-size: 12px; color: #999; margin-bottom: 10px; text-align: center; }
+.articleTopPic { width: 100%; overflow: hidden; height: 110px; padding: 10px; padding-left: 175px; }
+.articleTopLeft, .articleTopRight { float: left; height: 90px; }
+.articleTopLeft { margin-left: -165px; }
+.articleTopLeft img { display: block; width: 165px; height: 70px; }
+.articleTopLeft em { display: block; width: 100%; height: 18px; border-radius: 3px; line-height: 18px; color: #fff; background: #f3943e; font-style: normal; margin-top: 2px; }
+.articleTopLeft em span { display: inline-block; padding-left: 30px; background: url(../images/iconly.png) no-repeat left center; background-size: 15px 15px; }
+.articleTopRight { text-align: left; width: 100%; height: 70px; padding-left: 5px; }
+.articleTopRight h5, .articleTopRight p { width: 100%; height: 30px; line-height: 30px; text-overflow: ellipsis; overflow: hidden; white-space: nowrap; }
+.articleTopRight h5 { font-size: 16px; }
+.articleTopRight p { font-size: 14px; color: #666; }
+.articleTopRight p em { font-style: normal; color: #f25161; }
+.phbBox { width: 100%; overflow: hidden; padding: 10px; }
+.phbTit { width: 90%; line-height: 35px; overflow: hidden; margin: 0px auto; font-size: 20px; background: #ff9328; color: #fff; margin-bottom: 10px; }
+.phbCont { width: 100%; overflow: hidden; line-height: 25px; text-align: left; color: #666; }
+.phbCont strong { font-size: 16px; font-weight: normal; color: #333; }
+.phbList { width: 100%; overflow: hidden; }
+.phbSub { width: 100%; height: 100px; overflow: hidden; padding: 10px; padding-left: 166px; border-bottom: 1px solid #ddd; }
+.phbSub:last-child { border-bottom: none; }
+.phbLeft, .phbRight, .phbIcon, .phbPic { float: left; }
+.phbLeft { width: 156px; height: 80px; padding-left: 46px; margin-left: -156px; }
+.phbIcon { width: 36px; height: 43px; margin-left: -46px; margin-top: 18px; background: url(../images/phbicon1.png); background-size: 36px 43px; line-height: 40px; font-size: 18px; color: #fff; }
+.phbSub:nth-child(1) .phbIcon, .phbSub:nth-child(2) .phbIcon, .phbSub:nth-child(3) .phbIcon { background: url(../images/phbicon2.png); background-size: 36px 43px; }
+.phbPic { width: 110px; height: 80px; }
+.phbPic img { width: 110px; height: 80px; padding: 5px; background: #eee; }
+.phbRight { width: 100%; height: 80px; text-align: left; padding-left: 5px; }
+.phbRight h5 { width: 100%; height: 30px; line-height: 30px; font-size: 16px; }
+.phbRight p { width: 100%; height: 25px; line-height: 25px; color: #f57d37; }
+.phbRight p a { display: inline-block; width: 100px; height: 25px; padding-left: 30px; border: 1px solid #f57d37; line-height: 23px; color: #f57d37; border-radius: 5px; background: url(../images/iconly2.png) no-repeat 6px center; background-size: 15px 15px; }
+.phbRight h5, .phbRight p { text-overflow: ellipsis; overflow: hidden; white-space: nowrap; }
+.secArea { width: 100%; overflow: hidden; padding-left: 10px; padding-top: 10px; }
+.secAreaKey { width: 20%; padding-right: 10px; float: left; height: 30px; line-height: 30px; margin-bottom: 10px; }
+.secAreaKey a { display: block; width: 100%; height: 30px; font-size: 16px; color: #fff; background: #ff9328; }
+.secAreaKey.cur a { background: #e5e5e5; color: #666; }
+.secAreaCont { display: none; }
+.secAreaBox { width: 100%; overflow: hidden; }
+.secAreaBox li { width: 20%; height: 25px; padding-right: 10px; float: left; margin-bottom: 10px; }
+.secAreaBox li a { display: block; width: 100%; height: 25px; line-height: 23px; border: 1px solid #ddd; color: #999; text-overflow: ellipsis; overflow: hidden; white-space: nowrap; }
+.fontWrap { width: 42px; height: 32px; position: absolute; right: 10px; top: -4px; border: 1px solid #ddd; background: #fff; }
+.font { width: 40px; height: 30px; position: relative; }
+.fontTop { width: 40px; height: 30px; line-height: 30px; font-size: 14px; color: #999; text-align: center; }
+.fontMid { position: absolute; right: -1px; top: 100%; width: 152px; height: 52px; border: 1px solid #ddd; background: #fff; display: none; }
+.fontMid a { display: block; width: 40px; height: 40px; margin: 5px; line-height: 40px; text-align: center; float: left; border: 1px solid #ddd; color: #999; }
+.mT10 { margin-top: 40px; }
+.show { display: block; }
+.show p{ padding:10px 5px; }
+.show>h1{ width: 100%;line-height: 30px;overflow: hidden;font-size: 16px;color: #fd9927;text-align: center;margin-bottom: 10px;padding: 0px 10px;}
+.fontRed { color: #f25161!important; }
+.borderTN { border-top: none; }
+.borderBN { border-bottom: none; }
+.e404 img { width: 100%; max-width: 428px; }
+.e404 p a { color: #f25161; }
+.wap_body { width: 100%; margin: 0 auto; }
+.wap_body ul { padding: 0px; margin: 0px; }
+.wap_body ul li { list-style: none; padding: 0px; margin: 0px; }
+.wap_body ul li img { width: 100%; display: block; vertical-align: top; }
+/*留言板*/
+
+
+.lyb_nr { margin: 10px 10px 0 10px; background: #FFF; border: #e7e7e7 solid 1px; padding-bottom: 10px; text-align: left; }
+.lyb_nr span { font: bold 14px/20px "\5FAE\8F6F\96C5\9ED1"; color: #e23619; display: block; padding: 10px 0 15px 10px; }
+.lyb_nr .hs_wz { font: 12px/18px "\5FAE\8F6F\96C5\9ED1"; color: #ff0000; margin: 0 10px; display: block; font-weight: normal; padding-left: 10px; height: 18px; }
+.lyb_nr .inputbox { font: 12px/38px "\5FAE\8F6F\96C5\9ED1"; color: #333; height: 38px; border: 1px solid #ccc; padding-left: 10px; border-radius: 2px; -webkit-border-radius: 2px; -moz-border-radius: 2px; margin: 0 10px 15px 10px; }
+
+
+
+.lyb_nr .inputbox label { font-size: 14px; }
+.lyb_nr input { border: 0; width: 220px; overflow: hidden; color: #888; line-height: 32px; height: 32px; outline: none; }
+.lyb_nr .input_th { line-height: 40px }
+.lyb_nr .btn_tj { background: #d3172c; display: block; height: 40px; border: 1px solid #e12515; text-align: center; font: 16px/28px "\5FAE\8F6F\96C5\9ED1"; color: #fff8ef; -webkit-border-radius: 4px; -moz-border-radius: 4px; border-radius: 4px; width: 100%; -webkit-appearance: none; outline: none; }
+.lyb_nr .btn_th { background: #2b8c00; display: block; height: 40px; border: 1px solid #37930f; text-align: center; font: 16px/28px "\5FAE\8F6F\96C5\9ED1"; color: #fff8ef; -webkit-border-radius: 4px; -moz-border-radius: 4px; border-radius: 4px; display: block; width: 100%; -webkit-appearance: none; outline: none; }
+.lyb_nr .input_xz { margin: 0 10px; }
+
+ul.check { color: #333; font-size: 14px; height: auto; overflow: hidden; width: 95%; margin:auto; padding:10px;}
+.check li { float: left; height: 24px; margin-bottom: 11px; width: 40%; text-align: left; }
+input.check { height: 16px; margin: 0 8px 0 0; vertical-align: middle; width: 16px; }
+
+
+.xq_cont1 { margin: 10px; overflow: hidden }
+.xq_cont1 img { }
+.xq_cont1 .new_pho { font-size: 18px; font-weight: bold; line-height: 35px; color: #545454; clear: both; position: relative; }
+.xq_cont1 .new_pho a { display: block; width: 100px; height: 30px; line-height: 30px; color: #FFF; font-family: "\5FAE\8F6F\96C5\9ED1"; font-size: 14px; position: absolute; right: 0; top: 0; background: #169e16; border-radius: 10px; text-align: center }
+.xq_cont1 .new_pho a i { padding: 0px 3px 1px 18px; background: url(../images/new_ddh.png) no-repeat; background-size: 14px; }
+.xq_cont1 .bz { font: 12px/30px "\5FAE\8F6F\96C5\9ED1"; color: #5d5d5d; background: url(../images/icon2.png) 0 7px no-repeat; background-size: 18px; padding-left: 20px; border-top: 1px dashed #e0e1e1; clear: both }
+.xq_cont1 .xq_title { background: #FFF; border: solid 1px #e7e7e7; font-size: 14px; color: #929191; padding: 5px 10px 5px 10px; border-bottom: none }
+.xq_cont1 .xq_title strong { display: block; color: #333; font-weight: normal; font-size: 18px; border-bottom: none; padding: 0; padding-top: 5px; color: #010101 }
+.xq_cont1 .xq_title p { overflow: hidden; padding: 5px 10px; font: 12px/24px "\5FAE\8F6F\96C5\9ED1"; color: #333; background: #fff; }
+.xq_cont1 .xq_js { background: #FFF; border: solid 1px #e7e7e7; font-size: 16px; color: #929191; padding: 5px 10px 0px 10px; overflow: auto; }
+.xq_cont1 .xq_js p .tz_je { color: #333; background: url(../images/icon3.png) no-repeat 0px 7px; float: left; background-size: 17px; width: 39%; font: 12px/30px "\5FAE\8F6F\96C5\9ED1"; padding-left: 20px; overflow: hidden; }
+.xq_cont1 .xq_js p .tz_gz { color: #333; background: url(../images/icon4.png) 0 7px no-repeat; background-size: 17px; float: left; width: 39%; font: 12px/30px "\5FAE\8F6F\96C5\9ED1"; padding-left: 20px; overflow: hidden; }
+.xq_cont1 .xq_js p .tz_re { color: #333; float: left; width: 45%; font: 12px/30px "\5FAE\8F6F\96C5\9ED1"; overflow: hidden; background: url(../images/icon1.png) 0 7px no-repeat; background-size: 17px; padding-left: 20px }
+.xq_cont1 .xq_js p .tz_re i { width: 40px; height: 15px; font: 12px/15px "\5FAE\8F6F\96C5\9ED1"; color: #FFF; text-align: center; font-style: normal; background: url(../images/icon_rz.png) no-repeat; display: inline-block; background-size: 40px }
+.xq_cont1 .xq_js p .tz_re img { width: auto; float: left; margin-top: 8px; }
+.xq_cont1 .xq_js p .tz_hp { color: #333; background: url(../images/icon5.png) 0px 7px no-repeat; background-size: 17px; float: left; width: 39%; font: 12px/30px "\5FAE\8F6F\96C5\9ED1"; padding-left: 20px; overflow: hidden; }
+.xq_cont1 .xq_js p b { color: #db180b; font-weight: normal; }
+/*问答列表的样式*/
+
+
+
+.secL li em { display: block; width: 80px; height: 40px; font-size: 12px; color: #ed4848; float: right; font-style: normal; }
+.secL li p { width: 100%; font-size: 12px; line-height: 22px; overflow: hidden; text-align: left; }
+/*问答内容页的样式*/
+
+
+
+.cont3 { padding: 20px 20px; height: 30px }
+.cont3 li { float: left; font-size: 16px; width: 100%; padding-bottom: 5px; }
+.cont3 li a { color: #000; font-size: 14px; padding-left: 1em }
+.cont3 li a:hover, .cont4 li a:hover, .cplist li a:hover { color: #F00 }
+.dh { width: 80%; margin: 0 auto; background: #0DAEFC; border-radius: 5px; }
+.dh li { padding: 20px; }
+.dh li a { font-size: 16px; color: #FFFFFF; }
+.tk { width: 85%; margin: 0 auto; border: 1px #F5A206 solid; margin-top: 30px; border-radius: 5px; background: #E7DBCD; margin-bottom: 30px; }
+.tk .xt { width: 97%; margin: 0 auto; background: #D41A1D; border-radius: 5px; }
+.tk .xt li { padding: 10px; margin: 5px 0px; }
+.tk .xt li a { font-size: 38px; color: #FFFFFF; }
+.addbox { border-bottom: 1px solid #e0e1e1; padding: 10px; }
+.clearfix { display: block; }
+.clearfix { zoom: 1 }
+.prointroduce { /*background-color: #fffaf6;*/ border: 2px solid #ff6600; border-radius: 4px; padding: 8px; }
+.prointroduce a { color: #1062B5; font-size: 14px; line-height: 30px; }
+.prointroduce a.a-img { width: 160px; height: 90px; display: block; float: left; margin-right: 8px; }
+.prointroduce a.a-img img { height: 100%; width: 100%; }
+.prointroduce a.a-btn { width: 100%; text-align: center; display: block; border-radius: 4px; background: #BD0C26; color: #FFFFFF; height: 35px; line-height: 35px; font-size: 15px; margin: 15px auto 5px; }
+.prointroduce .c99 { line-height: 30px; font-size: 14px; }
+.prointroduce .cf2 { font-size: 14px; }
+a { text-decoration: none; }
+html, body, header, footer, nav, article, section, aside, time, code, div, p, ul, ol, li, dl, dd, dt, h1, h2, h3, a, span, strong, em, small, form, label, input, select, textarea { margin: 0; padding: 0; }
+/*图片列表页面的样式*/
+
+
+
+.list_xm { background-color: #fff; width: 100%; margin: auto; }
+.list_xm ul { }
+.list_xm ul li { box-sizing: border-box; width: 45%; float: left; text-align: center; margin: 8px; }
+.list_xm ul li a { width: 130px; height: 120px; padding: 5px 5px 0 5px; border: 1px solid #e1e1e1; display: block; margin: 0 auto; background-color: #fff; color: #666; }
+.list_xm ul li a span { display: block; height: 90px; line-height: 0; }
+.list_xm ul li a img { width: 120px; height: 90px; padding-bottom: 5px; }
+.clearfix:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
+.clearfix { zoom: 1; }
+li { list-style: none; display:block; }
+a { color: #333; text-decoration: none; outline: none; blr:expression(this.onFocus=this.blur());
+}
+/*专题样式*/
+
+.sec { width: 100%; overflow: hidden; background: #fff; }
+.borderTB { border-top: 2px solid #d9d9d9; border-bottom: 2px solid #d9d9d9; }
+.articleList { width: 100%; overflow: hidden; }
+.articleSub { width: 100%; height: 120px; padding: 10px; border-bottom: 1px solid #eee; padding-left: 120px; }
+.articleSub:last-child { border-bottom: none; }
+.articleLeft, .articleRight { float: left; }
+.articleLeft { width: 110px; height: 100px; margin-left: -110px; }
+.articleLeft a { display: block; width: 110px; height: 100px; padding: 5px; background: #eee; }
+.articleLeft a img { display: block; width: 100px; height: 70px; }
+.articleLeft a em { display: block; width: 100px; height: 20px; line-height: 20px; font-style: normal; color: #666; }
+.articleRight { text-align: left; width: 100%; padding-left: 5px; line-height: 20px; }
+.articleRight h5 { width: 100%; height: 20px; font-size: 16px; font-weight: normal; }
+.articleRight h5 a { display: block; color: #fd9927; }
+.articleRight p { font-size: 14px; color: #999; max-height: 60px; overflow: hidden; }
+.articleRight p.articleP { width: 100%; height: 20px; line-height: 20px; font-size: 12px; overflow: hidden; }
+.articleRight p.articleP span { display: inline-block; padding-left: 20px; margin-right: 10px; }
+.iconTime { background: url(../images/icontime.png) no-repeat left center; background-size: 15px 15px; }
+.iconView { background: url(../images/iconview.png) no-repeat left center; background-size: 15px 15px; }
+.articleLeft a em, .articleRight h5 a { text-overflow: ellipsis; overflow: hidden; white-space: nowrap; }
+.articleSub2 { width: 100%; height: 120px; padding: 10px; border-bottom: 1px solid #eee; }
+.articleList2 { width: 100%; overflow: hidden; padding: 10px; }
+.articleList2 li { width: 100%; padding-right: 80px; height: 40px; line-height: 40px; border-bottom: 1px dotted #eee; }
+.articleList2 li a { display: block; width: 100%; color: #666; text-align: left; float: left; text-overflow: ellipsis; overflow: hidden; white-space: nowrap; padding-left: 15px; background: url(../images/sectxticon.png) no-repeat left center; background-size: 6px 9px; }
+.articleList2 li em { display: block; width: 80px; height: 40px; font-size: 12px; color: #ed4848; text-align: right; float: left; margin-right: -80px; font-style: normal; }
+.articleList2 li:last-child { border-bottom: none; }
+.pageBox { width: 100%; height: 65px; padding: 20px 0px; }
+.pageBox a { display: inline-block; padding: 0px 8px; height: 25px; line-height: 25px; color: #666; background: #f9f9f9; border: 1px solid #d9d9d9; position: relative; margin-right: 10px; }
+.pageBox a i { display: inline-block; width: 12px; height: 12px; position: absolute; top: 50%; margin-top: -6px; }
+.pageBox a.pagePrev { padding-left: 20px; }
+.pageBox a.pageNext { padding-right: 20px; }
+.pageBox a.pagePrev i { left: 4px; }
+.pageBox a.pageNext i { right: 4px; }
+.iconPrev { background: url(../images/pageprev.png); background-size: 12px 12px; }
+.iconNext { background: url(../images/pagenext.png); background-size: 12px 12px; }
+.mT10 { margin-top: 40px; }
+.secTit2 { width: 100%; height: 45px; border-bottom: 1px solid #d9d9d9; text-align: left; padding-top: 5px; font-size: 18px; }
+.secTit2 strong { display: inline-block; height: 40px; line-height: 40px; color: #f57d37; padding-left: 35px; padding-right: 10px; margin-left: 10px; border-bottom: 2px solid #f57d37; }
+.secList4 { width: 100%; overflow: hidden; }
+.secList4 li { width: 100%; padding: 0px 33px 0px 74px; height: 40px; line-height: 40px; }
+.secList4 li a { text-overflow: ellipsis; overflow: hidden; white-space: nowrap; margin-left: -64px; display: block; float: left; width: 100%; height: 40px; color: #666; text-align: left; padding-left: 8px; background: url(../images/sectxticon.png) no-repeat left center; background-size: 6px 9px; }
+.secList4 li em { display: block; float: left; width: 80px; height: 40px; margin-right: -80px; color: #ed4848; font-size: 12px; text-align: right; font-style: normal; }
+.secList4 li strong { color: #ed4848; }
+/*专题内容页的样式*/
+
+.xy_no3zglz_top { MARGIN: auto; WIDTH: 100%; BACKGROUND: url(../images/xy_no3zglz_top.jpg) no-repeat center 50%; HEIGHT: 181px }
+.xy_no3zglz_top_bk { MARGIN: auto; WIDTH: 1100px; HEIGHT: 181px }
+.xy_no3zglz_top_bk_top { WIDTH: 1100px; HEIGHT: 27px }
+.xy_no3zglz_top_bk_top_left { LINE-HEIGHT: 27px; WIDTH: 270px; FONT-FAMILY: "'微软雅黑',Verdana, Arial, Helvetica, sans-serif"; FLOAT: left; HEIGHT: 27px }
+.xy_no3zglz_top_bk_top_right { TEXT-ALIGN: center; LINE-HEIGHT: 27px; WIDTH: 217px; FLOAT: right; HEIGHT: 27px; COLOR: #fff }
+.xy_no3zglz_top_bk_logo { WIDTH: 1100px; HEIGHT: 114px }
+.xy_no3zglz_top_bk_logo_left { WIDTH: 350px; FLOAT: left; HEIGHT: 114px }
+.xy_no3zglz_top_bk_logo_right { WIDTH: 462px; FLOAT: left; HEIGHT: 94px; MARGIN-LEFT: 20px; PADDING-TOP: 20px }
+.xy_no3zglz_top_bk_logo_right_top { LINE-HEIGHT: 24px; WIDTH: 462px; HEIGHT: 24px }
+.xy_no3zglz_top_bk_logo_right_bottom { WIDTH: 462px; HEIGHT: 30px }
+.xy_no3zglz_top_bk_logo_right_bottom_ssk { POSITION: relative; WIDTH: 382px; FLOAT: left; HEIGHT: 30px }
+.xy_no3zglz_top_bk_logo_right_bottom_ssk INPUT { BORDER-BOTTOM: #7f6b60 1px solid; BORDER-LEFT: #7f6b60 1px solid; LINE-HEIGHT: 26px; WIDTH: 380px; HEIGHT: 28px; BORDER-TOP: #7f6b60 1px solid; BORDER-RIGHT: #7f6b60 1px solid }
+.xy_no3zglz_top_bk_logo_right_bottom_an { WIDTH: 80px; FLOAT: right; HEIGHT: 30px }
+.xy_no3zglz_top_bk_dht { WIDTH: 1100px; HEIGHT: 40px }
+.xy_no3zglz_top_bk_dht_left { TEXT-ALIGN: center; LINE-HEIGHT: 40px; WIDTH: 200px; FONT-FAMILY: "'微软雅黑',Verdana, Arial, Helvetica, sans-serif"; FLOAT: left; HEIGHT: 40px; COLOR: #ffd801; FONT-SIZE: 14px }
+.xy_no3zglz_top_bk_dht_right { WIDTH: 900px; FLOAT: right; HEIGHT: 40px }
+.xy_no3zglz_top_bk_dht_right UL div { TEXT-ALIGN: center; LINE-HEIGHT: 40px; WIDTH: 100px; FONT-FAMILY: "'微软雅黑',Verdana, Arial, Helvetica, sans-serif"; FLOAT: left; HEIGHT: 40px; COLOR: #ffd801; FONT-SIZE: 14px }
+.xy_no3zglz_top_bk_dht_right UL div A { COLOR: #ffd801 }
+.xy_no3zglz_top_bk_dht_right UL LI { TEXT-ALIGN: center; LINE-HEIGHT: 40px; WIDTH: 100px; FONT-FAMILY: "'微软雅黑',Verdana, Arial, Helvetica, sans-serif"; FLOAT: left; HEIGHT: 40px; COLOR: #ffd801; FONT-SIZE: 14px }
+.xy_no3zglz_top_bk_dht_right UL LI A { COLOR: #ffd801 }
+.xy_no3zglz_banner { WIDTH: 100%; BACKGROUND: url(../images/xy_no3zglz_banner.jpg) repeat-x; HEIGHT: 560px }
+.xy_no3zglz_banner_bk { MARGIN: auto; WIDTH: 1100px; HEIGHT: 544px; PADDING-TOP: 16px }
+.xy_no3zglz_banne_bk_left { Z-INDEX: 10; POSITION: relative; PADDING-LEFT: 8px; WIDTH: 184px; PADDING-RIGHT: 8px; BACKGROUND: #fff; FLOAT: left; HEIGHT: 538px; PADDING-TOP: 6px }
+.xy_no3zglz_banne_bk_left UL LI { BORDER-BOTTOM: #dbdbdb 1px solid; LINE-HEIGHT: 24px; WIDTH: 184px; OVERFLOW: hidden }
+#navfouce a { float: left; display: block; width: 105px; height: 40px; text-align: center; color: #ffd801; }
+#path { width: 1000px; margin: 15px auto 0; overflow: hidden; color: #000; }
+#path a { color: #000; }
+.pagination li { float: left; margin-left: 3px; }
+
+
+/*金牌项目tab*/
+.xm_tab li a{ float: left; width: 47%; color: #fff; text-align: center; background: #ee4a00; line-height: 30px; font-size: 16px; text-decoration: none; border-radius: 5px; margin: 5px; }
+.xm_tab li a.cur { color: #fff; background: #d3172c; border-radius: 5px; }
+
